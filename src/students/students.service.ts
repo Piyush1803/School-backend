@@ -7,7 +7,7 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class StudentsService {
-
+  
   constructor(
     @InjectRepository(Student)
     private studentRepo : Repository<Student>,
@@ -18,7 +18,7 @@ export class StudentsService {
   }
 
   findAll() {
-    return this.studentRepo.find;
+    return this.studentRepo.find();
   }
 
   findOne(id: string) {
