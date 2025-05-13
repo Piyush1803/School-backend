@@ -4,7 +4,6 @@ import { UpdateTeacherDto } from './dto/update-teacher.dto';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Teacher } from './entities/teacher.entity';
 import { Repository } from 'typeorm';
-import { runInThisContext } from 'vm';
 
 @Injectable()
 export class TeachersService {
@@ -21,15 +20,15 @@ export class TeachersService {
     return this.teacherRepo.find();
   }
 
-  findOne(id: string) {
-    return this.teacherRepo.findOneBy({id});
+  findOne(tid: string) {
+    return this.teacherRepo.findOneBy({tid});
   }
 
-  update(id: string, data_update: UpdateTeacherDto) {
-    return this.teacherRepo.update(id,data_update);
+  update(tid: string, data_update: UpdateTeacherDto) {
+    return this.teacherRepo.update(tid,data_update);
   }
 
-  remove(id: string) {
-    return this.teacherRepo.delete(id);
+  remove(tid: string) {
+    return this.teacherRepo.delete(tid);
   }
 }

@@ -21,15 +21,15 @@ export class StudentsService {
     return this.studentRepo.find();
   }
 
-  findOne(id: string) {
-    return this.studentRepo.findOneBy({id});
+  findOne(sid: string) {
+    return this.studentRepo.findOneBy({sid});
   }
 
-  update(id: string, data_update: UpdateStudentDto) {
-    return this.studentRepo.update(id,data_update);
+  update(sid: string, data_update: UpdateStudentDto) {
+    return this.studentRepo.update(sid,data_update);
   }
 
-  remove(id: string) {
-    return this.studentRepo.delete(id);
+  remove(sid: string) {
+    return this.studentRepo.delete(sid);
   }
 }

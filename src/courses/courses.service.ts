@@ -20,15 +20,15 @@ export class CoursesService {
     return this.courseRepo.find();
   }
 
-  findOne(id: string) {
-    return this.courseRepo.findOneBy({id});
+  findOne(cid: string) {
+    return this.courseRepo.findOneBy({cid});
   }
 
-  update(id: string, data_update: UpdateCourseDto) {
-    return this.courseRepo.update(id,data_update);
+  update(cid: string, data_update: UpdateCourseDto) {
+    return this.courseRepo.update(cid,data_update);
   }
 
-  remove(id: string) {
-    return this.courseRepo.delete(id);
+  remove(cid: string) {
+    return this.courseRepo.delete(cid);
   }
 }

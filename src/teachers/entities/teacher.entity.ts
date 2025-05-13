@@ -1,9 +1,10 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { Course } from "src/courses/entities/course.entity";
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity()
 export class Teacher {
     @PrimaryGeneratedColumn('uuid')
-    id:string;
+    tid:string;
 
     @Column()
     first_name:string;
@@ -19,4 +20,7 @@ export class Teacher {
 
     @Column()
     department:string;
+
+    @OneToMany(()=> Course, course => course.teacher)
+    courses:Course[];
 }

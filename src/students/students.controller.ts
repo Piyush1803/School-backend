@@ -17,17 +17,17 @@ export class StudentsController {
     return this.studentsService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.studentsService.findOne(id);
+  @Get(':sid')
+  findOne(@Param('sid') sid: string) {
+    return this.studentsService.findOne(sid);
   }
-  @Put(':id')
-  update(@Param('id') id: string, @Body() updateStudentDto: UpdateStudentDto) {
-    return this.studentsService.update(id, updateStudentDto);
+  @Put(':sid')
+  update(@Param('sid') sid: string, @Body() updateStudentDto: UpdateStudentDto) {
+    return this.studentsService.update(sid, updateStudentDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.studentsService.remove(id);
+  @Delete(':sid')
+  remove(@Param('sid') sid: string) {
+    return this.studentsService.remove(sid);
   }
 }

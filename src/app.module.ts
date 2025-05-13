@@ -17,6 +17,7 @@ import { TeachersModule } from './teachers/teachers.module';
       database: 'school',
       autoLoadEntities: true,
       synchronize: true,
+      logging:true
     }),
     StudentsModule,
     CoursesModule,
