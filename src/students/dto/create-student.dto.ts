@@ -3,4 +3,6 @@ export class CreateStudentDto {
     last_name:string;
     phone:string;
     address:string;
+    courseIds:string[];
+    studentIds:string[];
 }
